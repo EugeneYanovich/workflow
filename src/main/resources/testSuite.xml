@@ -1,0 +1,24 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name = "SuiteAll" >
+    <test name = "all" parallel="methods">
+        <parameter name="param" value ="Testing"/>
+        <classes>
+            <class name ="PenTest"/>
+        </classes>
+    </test>
+
+    <test name = "isWorkGroup" parallel="methods">
+        <groups>
+            <run>
+                <include name="IsWorkTest"/>
+            </run>
+        </groups>
+        <classes>
+            <class name ="PenTest"/>
+        </classes>
+    </test>
+
+
+</suite>
